@@ -7,12 +7,74 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Cadastropage">
+    <!--INICIO PAGE-->
+    <Page.Resources>
+        <!-- Mesmo estilo de TextBox e PasswordBox do LoginPage -->
+        
+        <Style x:Key="DarkTextBoxStyle" TargetType="TextBox">
+            <Setter Property="Background" Value="#FF222222"/>
+            <Setter Property="Foreground" Value="#FFFFFFFF"/>
+            <Setter Property="BorderBrush" Value="#FF666666"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        <Style x:Key="DarkPasswordBoxStyle" TargetType="PasswordBox">
+            <Setter Property="Background" Value="#FF222222"/>
+            <Setter Property="Foreground" Value="#FFFFFFFF"/>
+            <Setter Property="BorderBrush" Value="#FF666666"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+    </Page.Resources>
+    <!--FINALPAGERESOUCE-->
+    <Grid>
+        <!-- Fundo com efeito de suminagashi (gradiente radial) -->
+        <Ellipse Fill="#FF000000" Width="600" Height="600" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0.5"/>
+        <Ellipse>
+            <Ellipse.Fill>
+                <RadialGradientBrush GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
+                    <GradientStop Color="#FF111111" Offset="0"/>
+                    <GradientStop Color="#FF000000" Offset="1"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
 
-    <Grid Background="White">
-        <Label Content="Senha:" HorizontalAlignment="Left" Margin="211,177,0,0" VerticalAlignment="Top" Width="115" Height="28"/>
-        <Label Content="Confirmar Senha" HorizontalAlignment="Left" Margin="209,239,0,0" VerticalAlignment="Top" Width="115" Height="28"/>
-        <Label Content="Email:" HorizontalAlignment="Left" Margin="211,116,0,0" VerticalAlignment="Top" Width="116" Height="28"/>
-        <Label Content="Nome de Usuario" HorizontalAlignment="Left" Margin="210,297,0,0" VerticalAlignment="Top" Width="114"/>
+        <!-- Conteúdo -->
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel Width="350" Margin="20">
+                <!-- Título -->
+                <TextBlock Text="Cadastro" FontSize="32" FontFamily="Segoe UI Black" Foreground="#FFFFFFFF" 
+                           HorizontalAlignment="Center" Margin="0,0,0,30"/>
+                <!-- Campo Nome de Usuário -->
+                <TextBlock Text="Nome de Usuário" Foreground="#FFCCCCCC" Margin="0,0,0,5"/>
+                <TextBox x:Name="TxtUsername" Style="{StaticResource DarkTextBoxStyle}" Margin="0,0,0,20"/>
 
+                <!-- Campo Senha -->
+                <TextBlock Text="Senha" Foreground="#FFCCCCCC" Margin="0,0,0,5"/>
+                <PasswordBox x:Name="PwdPassword" Style="{StaticResource DarkPasswordBoxStyle}" Margin="0,0,0,20"/>
+
+                <!-- Campo Confirmar Senha -->
+                <TextBlock Text="Confirmar Senha" Foreground="#FFCCCCCC" Margin="0,0,0,5"/>
+                <PasswordBox x:Name="PwdConfirmPassword" Style="{StaticResource DarkPasswordBoxStyle}" Margin="0,0,0,20"/>
+
+                <!-- Campo Telefone -->
+                <TextBlock Text="Telefone" Foreground="#FFCCCCCC" Margin="0,0,0,5"/>
+                <TextBox x:Name="TxtTelefone" Style="{StaticResource DarkTextBoxStyle}" Margin="0,0,0,20"/>
+
+                <!-- Campo Email (adicionei para completar) -->
+                <TextBlock Text="Email" Foreground="#FFCCCCCC" Margin="0,0,0,5"/>
+                <TextBox x:Name="TxtEmail" Style="{StaticResource DarkTextBoxStyle}" Margin="0,0,0,30"/>
+                <!-- Botão Cadastrar -->
+                 <!--=<Button x:Name="BtnCadastrar" Content="Cadastrar" Background="#FF333333" Foreground="#FFFFFFFF" 
+                        FontSize="16" Padding="10" BorderBrush="#FF666666" BorderThickness="2" 
+                        HorizontalAlignment="Center" Click="BtnCadastrar_Click"/> -->
+
+                <!-- Link para voltar -->
+                <!--<TextBlock Text="Voltar à Homepage" Foreground="#FFCCCCCC" HorizontalAlignment="Center" 
+                           Margin="0,20,0,0" Cursor="Hand" MouseLeftButtonDown="TxtVoltar_MouseLeftButtonDown"/> -->
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>

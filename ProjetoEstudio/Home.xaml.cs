@@ -25,12 +25,12 @@ namespace ProjetoEstudio
             InitializeComponent();
         }
 
-        private void bnt_Login_Click(object sender, RoutedEventArgs e)
+        private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Loginpage());
         }
 
-        private void bnt_Login_Copiar_Click(object sender, RoutedEventArgs e)
+        private void BtnCadastro_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Cadastropage());
         }

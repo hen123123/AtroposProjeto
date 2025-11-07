@@ -28,7 +28,7 @@
             <Setter Property="FontSize" Value="14"/>
         </Style>
     </Page.Resources>
-        <!--FINALPAGERESOUCE-->
+    <!--FINALPAGERESOUCE-->
 
     <Grid>
         <!-- Fundo com efeito de blackwork (gradiente linear) -->
@@ -57,13 +57,15 @@
             <PasswordBox x:Name="PwdPassword" Style="{StaticResource DarkPasswordBoxStyle}" Margin="0,0,0,30"/>
 
             <!-- Botão Entrar -->
-             <!--<Button x:Name="BtnEntrar" Content="Entrar" Background="#FF333333" Foreground="#FFFFFFFF" 
+            <Button x:Name="BtnEntrar" Content="Entrar" Background="#FF333333" Foreground="#FFFFFFFF" 
                     FontSize="16" Padding="10" BorderBrush="#FF666666" BorderThickness="2" 
-                    HorizontalAlignment="Center" Click="BtnEntrar_Click"/> -->
+                    HorizontalAlignment="Center"/>
 
             <!-- Link para voltar -->
-            <!--<TextBlock Text="Voltar à Homepage" Foreground="#FFCCCCCC" HorizontalAlignment="Center" 
-                       Margin="0,20,0,0" Cursor="Hand" MouseLeftButtonDown="TxtVoltar_MouseLeftButtonDown"/> -->
         </StackPanel>
+        <Button x:Name="btn_Voltar" Content="Voltar" Background="#FF333333" Foreground="#FFFFFFFF" 
+                FontSize="14" Padding="5" BorderBrush="Transparent" 
+                HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20"
+                Click="BtnVoltar_Click"/>
     </Grid>
 </Page>

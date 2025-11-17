@@ -29,5 +29,10 @@ namespace ProjetoEstudio
         {
            NavigationService.Navigate(new Home());
         }
+
+        private void BtnEntrar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

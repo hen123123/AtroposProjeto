@@ -59,13 +59,13 @@
             <!-- Botão Entrar -->
             <Button x:Name="BtnEntrar" Content="Entrar" Background="#FF333333" Foreground="#FFFFFFFF" 
                     FontSize="16" Padding="10" BorderBrush="#FF666666" BorderThickness="2" 
-                    HorizontalAlignment="Center"/>
+                    Width="116" HorizontalAlignment="Center" Click="BtnEntrar_Click"/>
 
-            <!-- Link para voltar -->
+            <!-- Botão Voltar (igual ao Entrar e centralizado, usa o mesmo handler) -->
+            <Button x:Name="BtnVoltar" Content="Voltar" Background="#FF333333" Foreground="#FFFFFFFF"
+                    FontSize="16" Padding="10" BorderBrush="#FF666666" BorderThickness="2"
+                    Width="116" HorizontalAlignment="Center" Margin="0,10,0,0"
+                    Click="BtnVoltar_Click"/>
         </StackPanel>
-        <Button x:Name="btn_Voltar" Content="Voltar" Background="#FF333333" Foreground="#FFFFFFFF" 
-                FontSize="14" Padding="5" BorderBrush="Transparent" 
-                HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20"
-                Click="BtnVoltar_Click"/>
     </Grid>
 </Page>

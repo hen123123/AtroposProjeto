@@ -25,7 +25,17 @@ namespace ProjetoEstudio
             InitializeComponent();
         }
 
-        private void RadioButton(object sender, RoutedEventArgs e)
+        private void Sair2Btn_Click(object sender, RoutedEventArgs e)
+        {
+            var result = MessageBox.Show("Deseja realmente sair?", "...", MessageBoxButton.YesNo);
+            
+            if(result == MessageBoxResult.Yes)
+            {
+            Application.Current.Shutdown();
+            }          
+        }
+
+        private void ConfSeleButton_Click(object sender, RoutedEventArgs e)
         {
 
         }

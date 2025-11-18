@@ -47,6 +47,8 @@
             <!--  <Button x:Name="BtnConfirmar" Content="Confirmar Seleção"  
                 HorizontalAlignment="Center" Margin="0,30,0,0" Click="BtnConfirmar_Click" Background="{x:Null}" Foreground="White" BorderBrush="#FFE0C6C6"/> -->
         </StackPanel>
+        <Button x:Name="ConfSeleButton" Content="Confirmar Seleção" HorizontalAlignment="Center" Margin="0,336,0,0" VerticalAlignment="Top" Height="30" Width="132" Click="ConfSeleButton_Click"/>
+        <Button x:Name="Sair2Btn" Content="Sair" HorizontalAlignment="Center" Margin="0,383,0,0" VerticalAlignment="Top" Width="68" Height="31" Click="Sair2Btn_Click"/>
 
         <!-- Botão Voltar -->
         <!--<Button x:Name="BtnVoltar" Content="Voltar" Background="#FF333333" Foreground="#FFFFFFFF" 

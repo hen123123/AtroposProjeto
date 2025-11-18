@@ -67,7 +67,7 @@
             <!--Botão Cadastrar -->
             <Button x:Name="BtnCadastrar" Content="Cadastrar" Background="#FF1A1A1A" Foreground="#FFFFFFFF" 
                         FontSize="16" Padding="10" BorderBrush="#FF666666" BorderThickness="2" 
-                        Width="116" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+                        Width="116" HorizontalAlignment="Center" Margin="0,10,0,0" Click="BtnCadastrar_Click"/>
 
             <!-- Botão Voltar centralizado -->
             <Button Content="Voltar" Width="116" HorizontalAlignment="Center" Margin="0,10,0,0"

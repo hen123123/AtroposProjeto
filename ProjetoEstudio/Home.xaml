@@ -37,7 +37,7 @@
         <!-- Conteúdo principal -->
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20">
             <!-- Nome do estúdio -->
-            <TextBlock Text="Dark Ink Studio" FontSize="48" FontFamily="Impact" Foreground="#FFFFFFFF" 
+            <TextBlock Text="Valhalla Studio" FontSize="48" FontFamily="Impact" Foreground="#FFFFFFFF" 
                        HorizontalAlignment="Center" Margin="0,0,0,50"/>
 
             <!-- Descrição sutil -->

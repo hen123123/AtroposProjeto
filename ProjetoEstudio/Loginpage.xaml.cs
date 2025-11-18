@@ -27,12 +27,12 @@ namespace ProjetoEstudio
 
         private void BtnVoltar_Click(object sender, RoutedEventArgs e)
         {
-           NavigationService.Navigate(new Home());
+           NavigationService.Navigate(new Hubescolhas());
         }
 
         private void BtnEntrar_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new Home());
         }
     }
 }

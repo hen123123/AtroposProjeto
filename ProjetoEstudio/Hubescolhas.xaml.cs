@@ -16,23 +16,18 @@ using System.Windows.Shapes;
 namespace ProjetoEstudio
 {
     /// <summary>
-    /// Interação lógica para Cadastropage.xam
+    /// Interação lógica para Hubescolhas.xam
     /// </summary>
-    public partial class Cadastropage : Page
+    public partial class Hubescolhas : Page
     {
-        public Cadastropage()
+        public Hubescolhas()
         {
             InitializeComponent();
         }
 
-        private void BtnVoltar_Click(object sender, RoutedEventArgs e)
+        private void RadioButton(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Home());
-        }
 
-        private void BtnCadastrar_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Cadastro realizado com sucesso!");
         }
     }
 }

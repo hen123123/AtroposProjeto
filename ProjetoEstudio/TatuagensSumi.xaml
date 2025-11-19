@@ -9,9 +9,14 @@
       Title="TatuagensSumi">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
         <!-- Fundo com efeito de suminagashi (gradiente radial) -->
-        <Ellipse Fill="#FF000000" Width="800" Height="800" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0.3"/>
-        <Ellipse>
+        <Ellipse Fill="#FF000000" Width="800" Height="800" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0.3" Grid.RowSpan="2"/>
+        <Ellipse Grid.RowSpan="2">
             <Ellipse.Fill>
                 <RadialGradientBrush GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
                     <GradientStop Color="#FF111111" Offset="0"/>
@@ -21,7 +26,7 @@
         </Ellipse>
 
         <!-- Conteúdo principal -->
-        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="20">
+        <StackPanel Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="20">
             <!-- Título da página -->
             <TextBlock Text="Trabalhos em Suminagashi" FontSize="36" FontFamily="Impact" Foreground="#FFFFFFFF" 
                        HorizontalAlignment="Center" Margin="0,20,0,40">
@@ -30,140 +35,88 @@
                 </TextBlock.Effect>
             </TextBlock>
 
-            <!-- Galeria de placeholders em WrapPanel rolável -->
-            <ScrollViewer VerticalScrollBarVisibility="Auto" Height="500">
-                <WrapPanel x:Name="WrapGallery" Orientation="Horizontal" HorizontalAlignment="Center">
-                    <!-- Item 1: Placeholder para Tatuagem Suminagashi 1 -->
-                    <StackPanel Margin="10">
-                        <Rectangle Width="200" Height="200" Fill="#FF222222" Stroke="#FF666666" StrokeThickness="2" Margin="10">
-                            <Rectangle.Effect>
-                                <DropShadowEffect Color="#FF000000" BlurRadius="10" ShadowDepth="5"/>
-                            </Rectangle.Effect>
-                        </Rectangle>
-                        <TextBlock Text="Placeholder para Imagem" Foreground="#FFCCCCCC" FontSize="12" HorizontalAlignment="Center" Margin="0,5,0,10"/>
-                        <Button Content="Selecionar" Background="#FF333333" Foreground="#FFFFFFFF" BorderBrush="#FF666666" BorderThickness="1" Padding="8" Margin="5" FontSize="12" Width="100" Click="BtnSelecionar1_Click">
-                            <Button.Style>
-                                <Style TargetType="Button">
-                                    <Style.Triggers>
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter Property="Background" Value="#FF555555"/>
-                                        </Trigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </Button.Style>
-                        </Button>
-                    </StackPanel>
+            <WrapPanel x:Name="WrapGallery" Orientation="Horizontal" HorizontalAlignment="Center">
+                <!-- Item 1: Placeholder para Tatuagem Suminagashi 1 -->
+                <StackPanel Margin="10">
+                    <Rectangle Width="150" Height="150" Fill="#FF222222" Stroke="#FF666666" StrokeThickness="2" Margin="10">
+                        <Rectangle.Effect>
+                            <DropShadowEffect Color="#FF000000" BlurRadius="10" ShadowDepth="5"/>
+                        </Rectangle.Effect>
+                    </Rectangle>
+                    <Button Content="Selecionar" Background="#FF333333" Foreground="#FFFFFFFF" BorderBrush="#FF666666" BorderThickness="1" Padding="8" Margin="5" FontSize="12" Width="100" Click="BtnSelecionar1_Click">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#FF555555"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </StackPanel>
 
-                    <!-- Item 2: Placeholder para Tatuagem Suminagashi 2 -->
-                    <StackPanel Margin="10">
-                        <Rectangle Width="200" Height="200" Fill="#FF222222" Stroke="#FF666666" StrokeThickness="2" Margin="10">
-                            <Rectangle.Effect>
-                                <DropShadowEffect Color="#FF000000" BlurRadius="10" ShadowDepth="5"/>
-                            </Rectangle.Effect>
-                        </Rectangle>
-                        <TextBlock Text="Placeholder para Imagem" Foreground="#FFCCCCCC" FontSize="12" HorizontalAlignment="Center" Margin="0,5,0,10"/>
-                        <Button Content="Selecionar" Background="#FF333333" Foreground="#FFFFFFFF" BorderBrush="#FF666666" BorderThickness="1" Padding="8" Margin="5" FontSize="12" Width="100" Click="BtnSelecionar2_Click">
-                            <Button.Style>
-                                <Style TargetType="Button">
-                                    <Style.Triggers>
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter Property="Background" Value="#FF555555"/>
-                                        </Trigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </Button.Style>
-                        </Button>
-                    </StackPanel>
+                <!-- Item 2: Placeholder para Tatuagem Suminagashi 2 -->
+                <StackPanel Margin="10">
+                    <Rectangle Width="150" Height="150" Fill="#FF222222" Stroke="#FF666666" StrokeThickness="2" Margin="10">
+                        <Rectangle.Effect>
+                            <DropShadowEffect Color="#FF000000" BlurRadius="10" ShadowDepth="5"/>
+                        </Rectangle.Effect>
+                    </Rectangle>
+                    <Button Content="Selecionar" Background="#FF333333" Foreground="#FFFFFFFF" BorderBrush="#FF666666" BorderThickness="1" Padding="8" Margin="5" FontSize="12" Width="100" Click="BtnSelecionar2_Click">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#FF555555"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </StackPanel>
 
-                    <!-- Item 3: Placeholder para Tatuagem Suminagashi 3 -->
-                    <StackPanel Margin="10">
-                        <Rectangle Width="200" Height="200" Fill="#FF222222" Stroke="#FF666666" StrokeThickness="2" Margin="10">
-                            <Rectangle.Effect>
-                                <DropShadowEffect Color="#FF000000" BlurRadius="10" ShadowDepth="5"/>
-                            </Rectangle.Effect>
-                        </Rectangle>
-                        <TextBlock Text="Placeholder para Imagem" Foreground="#FFCCCCCC" FontSize="12" HorizontalAlignment="Center" Margin="0,5,0,10"/>
-                        <Button Content="Selecionar" Background="#FF333333" Foreground="#FFFFFFFF" BorderBrush="#FF666666" BorderThickness="1" Padding="8" Margin="5" FontSize="12" Width="100" Click="BtnSelecionar3_Click">
-                            <Button.Style>
-                                <Style TargetType="Button">
-                                    <Style.Triggers>
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter Property="Background" Value="#FF555555"/>
-                                        </Trigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </Button.Style>
-                        </Button>
-                    </StackPanel>
-
-                    <!-- Item 4: Placeholder para Tatuagem Suminagashi 4 -->
-                    <StackPanel Margin="10">
-                        <Rectangle Width="200" Height="200" Fill="#FF222222" Stroke="#FF666666" StrokeThickness="2" Margin="10">
-                            <Rectangle.Effect>
-                                <DropShadowEffect Color="#FF000000" BlurRadius="10" ShadowDepth="5"/>
-                            </Rectangle.Effect>
-                        </Rectangle>
-                        <TextBlock Text="Placeholder para Imagem" Foreground="#FFCCCCCC" FontSize="12" HorizontalAlignment="Center" Margin="0,5,0,10"/>
-                        <Button Content="Selecionar" Background="#FF333333" Foreground="#FFFFFFFF" BorderBrush="#FF666666" BorderThickness="1" Padding="8" Margin="5" FontSize="12" Width="100" Click="BtnSelecionar4_Click">
-                            <Button.Style>
-                                <Style TargetType="Button">
-                                    <Style.Triggers>
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter Property="Background" Value="#FF555555"/>
-                                        </Trigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </Button.Style>
-                        </Button>
-                    </StackPanel>
-
-                    <!-- Item 5: Placeholder para Tatuagem Suminagashi 5 -->
-                    <StackPanel Margin="10">
-                        <Rectangle Width="200" Height="200" Fill="#FF222222" Stroke="#FF666666" StrokeThickness="2" Margin="10">
-                            <Rectangle.Effect>
-                                <DropShadowEffect Color="#FF000000" BlurRadius="10" ShadowDepth="5"/>
-                            </Rectangle.Effect>
-                        </Rectangle>
-                        <TextBlock Text="Placeholder para Imagem" Foreground="#FFCCCCCC" FontSize="12" HorizontalAlignment="Center" Margin="0,5,0,10"/>
-                        <Button Content="Selecionar" Background="#FF333333" Foreground="#FFFFFFFF" BorderBrush="#FF666666" BorderThickness="1" Padding="8" Margin="5" FontSize="12" Width="100" Click="BtnSelecionar5_Click">
-                            <Button.Style>
-                                <Style TargetType="Button">
-                                    <Style.Triggers>
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter Property="Background" Value="#FF555555"/>
-                                        </Trigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </Button.Style>
-                        </Button>
-                    </StackPanel>
-
-                    <!-- Item 6: Placeholder para Tatuagem Suminagashi 6 -->
-                    <StackPanel Margin="10">
-                        <Rectangle Width="200" Height="200" Fill="#FF222222" Stroke="#FF666666" StrokeThickness="2" Margin="10">
-                            <Rectangle.Effect>
-                                <DropShadowEffect Color="#FF000000" BlurRadius="10" ShadowDepth="5"/>
-                            </Rectangle.Effect>
-                        </Rectangle>
-                        <TextBlock Text="Placeholder para Imagem" Foreground="#FFCCCCCC" FontSize="12" HorizontalAlignment="Center" Margin="0,5,0,10"/>
-                        <Button Content="Selecionar" Background="#FF333333" Foreground="#FFFFFFFF" BorderBrush="#FF666666" BorderThickness="1" Padding="8" Margin="5" FontSize="12" Width="100" Click="BtnSelecionar6_Click">
-                            <Button.Style>
-                                <Style TargetType="Button">
-                                    <Style.Triggers>
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter Property="Background" Value="#FF555555"/>
-                                        </Trigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </Button.Style>
-                        </Button>
-                    </StackPanel>
-                </WrapPanel>
-            </ScrollViewer>
-
-            <!-- Link para voltar ao Hub -->
-            <TextBlock Text="Voltar ao Hub de Escolhas" Foreground="#FFCCCCCC" HorizontalAlignment="Center" 
-                       Margin="0,30,0,0" Cursor="Hand" MouseLeftButtonDown="TxtVoltar_MouseLeftButtonDown"/>
+                <!-- Item 3: Placeholder para Tatuagem Suminagashi 3 -->
+                <StackPanel Margin="10">
+                    <Rectangle Width="150" Height="150" Fill="#FF222222" Stroke="#FF666666" StrokeThickness="2" Margin="10">
+                        <Rectangle.Effect>
+                            <DropShadowEffect Color="#FF000000" BlurRadius="10" ShadowDepth="5"/>
+                        </Rectangle.Effect>
+                    </Rectangle>
+                    <Button Content="Selecionar" Background="#FF333333" Foreground="#FFFFFFFF" BorderBrush="#FF666666" BorderThickness="1" Padding="8" Margin="5" FontSize="12" Width="100" Click="BtnSelecionar3_Click">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#FF555555"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </StackPanel>
+            </WrapPanel>
         </StackPanel>
+
+        <!-- Botão Voltar posicionado na parte inferior da tela -->
+        <Button Grid.Row="1" Content="Voltar" Background="#FF333333" Foreground="#FFFFFFFF" BorderBrush="#FF666666" BorderThickness="1" Padding="8" FontSize="12" Width="100" Height="34" Click="BtnVoltar_Click" HorizontalAlignment="Center" Margin="0,12,0,20" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.101"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FF555555"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
     </Grid>
 </Page>

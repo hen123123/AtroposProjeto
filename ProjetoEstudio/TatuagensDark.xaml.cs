@@ -42,7 +42,7 @@ namespace ProjetoEstudio
 
         private void BtnVoltar_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new Hubescolhas());
         }
     }
 }

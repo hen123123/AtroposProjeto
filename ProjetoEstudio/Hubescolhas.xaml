@@ -8,52 +8,51 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Hubescolhas">
 
-    <Grid>
-        <!-- Fundo com efeito de blackwork (gradiente linear) -->
-        <Rectangle Fill="#FF000000"/>
-        <Rectangle>
-            <Rectangle.Fill>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Color="#FF000000" Offset="0"/>
-                    <GradientStop Color="#FF111111" Offset="0.5"/>
-                    <GradientStop Color="#FF000000" Offset="1"/>
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
+	<Grid>
+		<!-- Fundo com efeito de blackwork (gradiente linear) -->
+		<Rectangle Fill="#FF000000"/>
+		<Rectangle>
+			<Rectangle.Fill>
+				<LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+					<GradientStop Color="#FF000000" Offset="0"/>
+					<GradientStop Color="#FF111111" Offset="0.5"/>
+					<GradientStop Color="#FF000000" Offset="1"/>
+				</LinearGradientBrush>
+			</Rectangle.Fill>
+		</Rectangle>
 
-        <!-- Conteúdo -->
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" Margin="20">
-            <!-- Título -->
-            <TextBlock Text="Escolha seu Estilo de Tatuagem" FontSize="26" FontFamily="Segoe UI Black" Foreground="#FFFFFFFF" 
+		<!-- Conteúdo -->
+		<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" Margin="20">
+			<!-- Título -->
+			<TextBlock Text="Escolha seu Estilo de Tatuagem" FontSize="26" FontFamily="Segoe UI Black" Foreground="#FFFFFFFF" 
                    HorizontalAlignment="Center" Margin="0,0,0,30"/>
 
-            <!-- GroupBox para seleção -->
-            <GroupBox Header="Estilos Disponíveis" Foreground="#FFFFFFFF" BorderBrush="#FF666666" BorderThickness="2" Margin="0,0,0,20">
-                <StackPanel>
-                    <RadioButton x:Name="RbSuminagashi" Content="Suminagashi"  
+			<!-- GroupBox para seleção -->
+			<GroupBox Header="Estilos Disponíveis" Foreground="#FFFFFFFF" BorderBrush="#FF666666" BorderThickness="2" Margin="0,0,0,20">
+				<StackPanel>
+					<RadioButton x:Name="RbSuminagashi" Content="Suminagashi"  
                              Checked="SumiButton" Foreground="White"/>
-                    <RadioButton x:Name="RbBlackwork" Content="Blackwork"  
+					<RadioButton x:Name="RbBlackwork" Content="Blackwork"  
                              Checked="BlackButton" Foreground="White"/>
-                    <RadioButton x:Name="RbDarkOrnamental" Content="Dark Ornamental" 
+					<RadioButton x:Name="RbDarkOrnamental" Content="Dark Ornamental" 
                              Checked="DarkButton" Foreground="White"/>
-                </StackPanel>
-            </GroupBox>
+				</StackPanel>
+			</GroupBox>
 
-            <!-- Descrição dinâmica -->
-            <TextBlock x:Name="TxtDescription" Text="Selecione um estilo acima para ver a descrição." 
-                   Height="60" Foreground="White"/>
+			<!-- Descrição dinâmica -->
+			<TextBox x:Name="TxtDescription" TextWrapping="Wrap" Text="seleciono um estilo acima para ver a descreição" Width="400" Height="86" Background="{x:Null}" Foreground="White"/>
 
-            <!-- Botão Confirmar -->
-            <!--  <Button x:Name="BtnConfirmar" Content="Confirmar Seleção"  
+			<!-- Botão Confirmar -->
+			<!--  <Button x:Name="BtnConfirmar" Content="Confirmar Seleção"  
                 HorizontalAlignment="Center" Margin="0,30,0,0" Click="BtnConfirmar_Click" Background="{x:Null}" Foreground="White" BorderBrush="#FFE0C6C6"/> -->
-        </StackPanel>
-        <Button x:Name="ConfSeleButton" Content="Confirmar Seleção" HorizontalAlignment="Center" Margin="0,384,0,0" VerticalAlignment="Top" Height="30" Width="132" Click="ConfSeleButton_Click"/>
-        <Button x:Name="Sair2Btn" Content="Sair" HorizontalAlignment="Center" Margin="0,419,0,0" VerticalAlignment="Top" Width="68" Height="31" Click="Sair2Btn_Click"/>
+		</StackPanel>
+		<Button x:Name="ConfSeleButton" Content="Confirmar Seleção" HorizontalAlignment="Left" Margin="334,384,0,0" Width="132" Click="ConfSeleButton_Click" Foreground="White" Background="{x:Null}" BorderBrush="White" Height="30" VerticalAlignment="Top"/>
+		<Button x:Name="Sair2Btn" Content="Sair" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="68" Height="31" Click="Sair2Btn_Click" Background="{x:Null}" BorderBrush="White" Foreground="White"/>
 
-        <!-- Botão Voltar -->
-        <!--<Button x:Name="BtnVoltar" Content="Voltar" Background="#FF333333" Foreground="#FFFFFFFF" 
+		<!-- Botão Voltar -->
+		<!--<Button x:Name="BtnVoltar" Content="Voltar" Background="#FF333333" Foreground="#FFFFFFFF" 
             FontSize="14" Padding="5" BorderBrush="Transparent" 
             HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20"
             Click="BtnVoltar_Click"/> -->
-    </Grid>
+	</Grid>
 </Page>

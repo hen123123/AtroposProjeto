@@ -40,7 +40,7 @@
 			</GroupBox>
 
 			<!-- Descrição dinâmica -->
-			<TextBox x:Name="TxtDescription" TextWrapping="Wrap" Text="seleciono um estilo acima para ver a descreição" Width="400" Height="86" Background="{x:Null}" Foreground="White"/>
+			<TextBox x:Name="TxtDescription" TextWrapping="Wrap" Text="Selecione um estilo acima para ver a descreição" Width="400" Height="86" Background="{x:Null}" Foreground="White"/>
 
 			<!-- Botão Confirmar -->
 			<!--  <Button x:Name="BtnConfirmar" Content="Confirmar Seleção"  

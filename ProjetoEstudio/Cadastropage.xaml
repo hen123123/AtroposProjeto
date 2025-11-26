@@ -49,7 +49,7 @@
                            HorizontalAlignment="Center" Margin="0,0,0,30"/>
 
             <!-- Campo Email (adicionei para completar) -->
-            <TextBlock Text="Email" Foreground="#FFCCCCCC" Margin="0,0,0,5"/>
+            <TextBlock Text="Nome de Usuário" Foreground="#FFCCCCCC" Margin="0,0,0,5"/>
             <TextBox x:Name="TxtEmail" Style="{StaticResource DarkTextBoxStyle}" Margin="0,0,0,30"/>
 
             <!-- Campo Telefone -->

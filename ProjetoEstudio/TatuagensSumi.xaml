@@ -38,7 +38,10 @@
             <WrapPanel x:Name="WrapGallery" Orientation="Horizontal" HorizontalAlignment="Center">
                 <!-- Item 1: Placeholder para Tatuagem Suminagashi 1 -->
                 <StackPanel Margin="10">
-                    <Rectangle Width="150" Height="150" Fill="#FF222222" Stroke="#FF666666" StrokeThickness="2" Margin="10">
+                    <Rectangle Width="150" Height="150" Stroke="#FF666666" StrokeThickness="2" Margin="10">
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="/download (4).jpg"/>
+                        </Rectangle.Fill>
                         <Rectangle.Effect>
                             <DropShadowEffect Color="#FF000000" BlurRadius="10" ShadowDepth="5"/>
                         </Rectangle.Effect>
@@ -58,7 +61,10 @@
 
                 <!-- Item 2: Placeholder para Tatuagem Suminagashi 2 -->
                 <StackPanel Margin="10">
-                    <Rectangle Width="150" Height="150" Fill="#FF222222" Stroke="#FF666666" StrokeThickness="2" Margin="10">
+                    <Rectangle Width="150" Height="150" Stroke="#FF666666" StrokeThickness="2" Margin="10">
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="/download (5).jpg"/>
+                        </Rectangle.Fill>
                         <Rectangle.Effect>
                             <DropShadowEffect Color="#FF000000" BlurRadius="10" ShadowDepth="5"/>
                         </Rectangle.Effect>
@@ -78,7 +84,10 @@
 
                 <!-- Item 3: Placeholder para Tatuagem Suminagashi 3 -->
                 <StackPanel Margin="10">
-                    <Rectangle Width="150" Height="150" Fill="#FF222222" Stroke="#FF666666" StrokeThickness="2" Margin="10">
+                    <Rectangle Width="150" Height="150" Stroke="#FF666666" StrokeThickness="2" Margin="10">
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="/download (6).jpg"/>
+                        </Rectangle.Fill>
                         <Rectangle.Effect>
                             <DropShadowEffect Color="#FF000000" BlurRadius="10" ShadowDepth="5"/>
                         </Rectangle.Effect>

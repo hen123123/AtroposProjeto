@@ -40,7 +40,10 @@
                 <WrapPanel x:Name="WrapGallery" Orientation="Horizontal" HorizontalAlignment="Center">
                     <!-- Item 1: Placeholder para Tatuagem Blackwork 1 -->
                     <StackPanel Margin="10">
-                        <Rectangle Width="150" Height="150" Fill="#FF222222" Stroke="#FF666666" StrokeThickness="2" Margin="10">
+                        <Rectangle Width="150" Height="150" Stroke="#FF666666" StrokeThickness="2" Margin="10">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/227344b5-5311-4741-99d3-7f7c848c88eb.jpg"/>
+                            </Rectangle.Fill>
                             <Rectangle.Effect>
                                 <DropShadowEffect Color="#FF000000" BlurRadius="10" ShadowDepth="5"/>
                             </Rectangle.Effect>
@@ -60,7 +63,10 @@
 
                     <!-- Item 2: Placeholder para Tatuagem Blackwork 2 -->
                     <StackPanel Margin="10">
-                        <Rectangle Width="150" Height="150" Fill="#FF222222" Stroke="#FF666666" StrokeThickness="2" Margin="10">
+                        <Rectangle Width="150" Height="150" Stroke="#FF666666" StrokeThickness="2" Margin="10">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/fd8fd315-97fa-4e1c-b652-553df38bd057.jpg"/>
+                            </Rectangle.Fill>
                             <Rectangle.Effect>
                                 <DropShadowEffect Color="#FF000000" BlurRadius="10" ShadowDepth="5"/>
                             </Rectangle.Effect>
@@ -80,7 +86,10 @@
 
                     <!-- Item 3: Placeholder para Tatuagem Blackwork 3 -->
                     <StackPanel Margin="10">
-                        <Rectangle Width="150" Height="150" Fill="#FF222222" Stroke="#FF666666" StrokeThickness="2" Margin="10">
+                        <Rectangle Width="150" Height="150" Stroke="#FF666666" StrokeThickness="2" Margin="10">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/3ea8d25c-8f2e-4a8e-a4fa-590051debcdc.jpg"/>
+                            </Rectangle.Fill>
                             <Rectangle.Effect>
                                 <DropShadowEffect Color="#FF000000" BlurRadius="10" ShadowDepth="5"/>
                             </Rectangle.Effect>
@@ -101,7 +110,7 @@
             </ScrollViewer>
 
             <!-- Link (mantido) para voltar ao Hub -->
-            
+
         </StackPanel>
 
         <!-- Botão Voltar fixo na parte inferior da tela -->

@@ -8,4 +8,34 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="227344b5-5311-4741-99d3-7f7c848c88eb.jpg" />
+    <None Remove="3ea8d25c-8f2e-4a8e-a4fa-590051debcdc.jpg" />
+    <None Remove="Dark ornamental tattoo neck.jpg" />
+    <None Remove="Dark Ornamental ⚡.jpg" />
+    <None Remove="download %282%29.jpg" />
+    <None Remove="download %283%29.jpg" />
+    <None Remove="download %284%29.jpg" />
+    <None Remove="download %285%29.jpg" />
+    <None Remove="download %286%29.jpg" />
+    <None Remove="fd8fd315-97fa-4e1c-b652-553df38bd057.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="9.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="227344b5-5311-4741-99d3-7f7c848c88eb.jpg" />
+    <Resource Include="3ea8d25c-8f2e-4a8e-a4fa-590051debcdc.jpg" />
+    <Resource Include="Dark ornamental tattoo neck.jpg" />
+    <Resource Include="Dark Ornamental ⚡.jpg" />
+    <Resource Include="download (2).jpg" />
+    <Resource Include="download (3).jpg" />
+    <Resource Include="download (4).jpg" />
+    <Resource Include="download (5).jpg" />
+    <Resource Include="download (6).jpg" />
+    <Resource Include="fd8fd315-97fa-4e1c-b652-553df38bd057.jpg" />
+  </ItemGroup>
+
 </Project>

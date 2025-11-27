@@ -23,10 +23,9 @@ namespace ProjetoEstudio
         public Home()
         {
             InitializeComponent();
-            // Abrir conexão com o banco quiz_jogador
-            //ConexaoBanco.AbrirConexao("Server=localhost;Database=quiz_jogador;User Id=root;Password=root;");
+            ConexaoBanco.AbrirConexao("Server=localhost;Database=quiz_jogador;User Id=root;Password=root;");
 
-            //if (ConexaoBanco.Conexao == null && ConexaoBanco.Conexao.State == System.Data.ConnectionState.Closed)
+            if (ConexaoBanco.Conexao == null && ConexaoBanco.Conexao.State == System.Data.ConnectionState.Closed)
             {
                 MessageBox.Show("Não foi possível conectar ao banco de dados.", "Erro de Conexão", MessageBoxButton.OK, MessageBoxImage.Error);
             }

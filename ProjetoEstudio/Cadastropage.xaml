@@ -29,7 +29,7 @@
         </Style>
     </Page.Resources>
     <!--FINALPAGERESOUCE-->
-    <Grid>
+    <Grid Margin="0,0,0,-21">
         <!-- Fundo com efeito de suminagashi (gradiente radial) -->
         <Ellipse Fill="#FF000000" Width="600" Height="600" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0.5"/>
         <Ellipse>
@@ -50,7 +50,7 @@
 
             <!-- Campo Email (adicionei para completar) -->
             <TextBlock Text="Nome de Usuário" Foreground="#FFCCCCCC" Margin="0,0,0,5"/>
-            <TextBox x:Name="TxtEmail" Style="{StaticResource DarkTextBoxStyle}" Margin="0,0,0,30"/>
+            <TextBox x:Name="Txtusuario" Style="{StaticResource DarkTextBoxStyle}" Margin="0,0,0,30"/>
 
             <!-- Campo Telefone -->
             <TextBlock Text="Telefone" Foreground="#FFCCCCCC" Margin="0,0,0,5"/>
@@ -58,7 +58,7 @@
 
             <!-- Campo Senha -->
             <TextBlock Text="Senha" Foreground="#FFCCCCCC" Margin="0,0,0,5"/>
-            <PasswordBox x:Name="PwdPassword" Style="{StaticResource DarkPasswordBoxStyle}" Margin="0,0,0,20"/>
+            <PasswordBox x:Name="txt_senha" Style="{StaticResource DarkPasswordBoxStyle}" Margin="0,0,0,20"/>
 
             <!-- Campo Confirmar Senha -->
             <TextBlock Text="Confirmar Senha" Foreground="#FFCCCCCC" Margin="0,0,0,5"/>

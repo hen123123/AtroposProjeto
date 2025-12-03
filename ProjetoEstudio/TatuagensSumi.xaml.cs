@@ -24,25 +24,15 @@ namespace ProjetoEstudio
         {
             InitializeComponent();
         }
-
-        private void BtnSelecionar1_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void BtnSelecionar2_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void BtnSelecionar3_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void BtnVoltar_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Hubescolhas());
+        }
+
+        private void BtnSelec1_Click(object sender, RoutedEventArgs e)
+        {
+            var btn = sender as Button;
+            NavigationService.Navigate(new Agenda(btn.Name));
         }
     }
 }

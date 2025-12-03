@@ -46,7 +46,7 @@
                             <DropShadowEffect Color="#FF000000" BlurRadius="10" ShadowDepth="5"/>
                         </Rectangle.Effect>
                     </Rectangle>
-                    <Button Content="Selecionar" Background="#FF333333" Foreground="#FFFFFFFF" BorderBrush="#FF666666" BorderThickness="1" Padding="8" Margin="5" FontSize="12" Width="100" Click="BtnSelecionar1_Click">
+                    <Button x:Name="Sumi1" Content="Selecionar" Background="#FF333333" Foreground="#FFFFFFFF" BorderBrush="#FF666666" BorderThickness="1" Padding="8" Margin="5" FontSize="12" Width="100" Click="BtnSelec1_Click">
                         <Button.Style>
                             <Style TargetType="{x:Type Button}">
                                 <Style.Triggers>
@@ -69,7 +69,7 @@
                             <DropShadowEffect Color="#FF000000" BlurRadius="10" ShadowDepth="5"/>
                         </Rectangle.Effect>
                     </Rectangle>
-                    <Button Content="Selecionar" Background="#FF333333" Foreground="#FFFFFFFF" BorderBrush="#FF666666" BorderThickness="1" Padding="8" Margin="5" FontSize="12" Width="100" Click="BtnSelecionar2_Click">
+                    <Button x:Name="Sumi2" Content="Selecionar" Background="#FF333333" Foreground="#FFFFFFFF" BorderBrush="#FF666666" BorderThickness="1" Padding="8" Margin="5" FontSize="12" Width="100" Click="BtnSelec1_Click">
                         <Button.Style>
                             <Style TargetType="{x:Type Button}">
                                 <Style.Triggers>
@@ -92,7 +92,7 @@
                             <DropShadowEffect Color="#FF000000" BlurRadius="10" ShadowDepth="5"/>
                         </Rectangle.Effect>
                     </Rectangle>
-                    <Button Content="Selecionar" Background="#FF333333" Foreground="#FFFFFFFF" BorderBrush="#FF666666" BorderThickness="1" Padding="8" Margin="5" FontSize="12" Width="100" Click="BtnSelecionar3_Click">
+                    <Button x:Name="Sumi3" Content="Selecionar" Background="#FF333333" Foreground="#FFFFFFFF" BorderBrush="#FF666666" BorderThickness="1" Padding="8" Margin="5" FontSize="12" Width="100" Click="BtnSelec1_Click">
                         <Button.Style>
                             <Style TargetType="{x:Type Button}">
                                 <Style.Triggers>

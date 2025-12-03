@@ -31,16 +31,6 @@ namespace ProjetoEstudio
             NavigationService.Navigate(new Agenda(btn.Name));
         }
 
-        private void BtnSelecionar2_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void BtnSelecionar3_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void BtnVoltar_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Hubescolhas());

@@ -15,14 +15,15 @@
                 <GradientStop Color="#FF171717" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Label Content="Seleção Data e Horario" HorizontalAlignment="Center" Margin="0,33,0,0" VerticalAlignment="Top" Foreground="White" Height="36" FontSize="20" FontFamily="Impact"/>
-        <DataGrid Margin="0,136,0,136" AutoGenerateColumns="False" >
+        <Label Content="Agenda Final" HorizontalAlignment="Center" Margin="0,33,0,0" VerticalAlignment="Top" Foreground="White" Height="36" FontSize="20" FontFamily="Impact"/>
+        <DataGrid Margin="0,136,0,136" AutoGenerateColumns="False" Background="#FFF0F0F0" >
             <DataGrid.Columns >
                 <DataGridTextColumn Header="Data e Hora" Binding="{Binding DataHora}" Width="*"/>
                 <DataGridTextColumn Header="Serviço" Binding="{Binding Servico}" Width="*"/>
                 <DataGridTextColumn Header="Cliente" Binding="{Binding Cliente}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Button Content="Button" HorizontalAlignment="Center" Margin="0,401,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>
 

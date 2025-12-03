@@ -32,17 +32,15 @@ namespace ProjetoEstudio
             NavigationService.Navigate(new Uri("Selecposescolha.xaml", UriKind.Relative));
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            ComboBox comboBox = sender as ComboBox;
 
-            comboBox.Items.Add("08:30");
-            comboBox.Items.Add("10:30");
-            comboBox.Items.Add("13:30");
-            comboBox.Items.Add("15:30");
-            comboBox.Items.Add("17:30");
-            comboBox.Items.Add("20:00");
-            comboBox.Items.Add("22:30");
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void VoltarHubClick(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Hubescolhas());
         }
     }
 }

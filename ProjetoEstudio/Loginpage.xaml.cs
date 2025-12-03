@@ -32,7 +32,27 @@ namespace ProjetoEstudio
 
         private void BtnEntrar_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Hubescolhas());
+            string connectionString = "Server=localhost;Database=valhalla;Uid=root;pwd=root;";
+
+            using (var connection = new MySql.Data.MySqlClient.MySqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT COUNT(*) FROM cadastro WHERE usuario = @usuario AND senha = @senha";
+                using (var command = new MySql.Data.MySqlClient.MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@usuario", TxtUsername.Text);
+                    command.Parameters.AddWithValue("@senha", PwdPassword.Password);
+                    int userCount = Convert.ToInt32(command.ExecuteScalar());
+                    if (userCount > 0)
+                    {
+                        NavigationService.Navigate(new Hubescolhas());
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuário ou senha inválidos.", "Erro de Login", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
+            }
         }
     }
 }

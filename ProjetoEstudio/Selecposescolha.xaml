@@ -16,5 +16,14 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Label Content="Seleção Data e Horario" HorizontalAlignment="Center" Margin="0,33,0,0" VerticalAlignment="Top" Foreground="White" Height="36" FontSize="20" FontFamily="Impact"/>
+        <DataGrid Margin="0,136,0,136" AutoGenerateColumns="False" >
+            <DataGrid.Columns >
+                <DataGridTextColumn Header="Data e Hora" Binding="{Binding DataHora}" Width="*"/>
+                <DataGridTextColumn Header="Serviço" Binding="{Binding Servico}" Width="*"/>
+                <DataGridTextColumn Header="Cliente" Binding="{Binding Cliente}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>
+
+    

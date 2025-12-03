@@ -27,7 +27,8 @@ namespace ProjetoEstudio
 
         private void BtnSelecionar1_Click(object sender, RoutedEventArgs e)
         {
-
+            var btn = sender as Button;
+            NavigationService.Navigate(new Agenda(btn.Name));
         }
 
         private void BtnSelecionar2_Click(object sender, RoutedEventArgs e)

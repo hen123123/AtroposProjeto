@@ -7,10 +7,19 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Agenda">
-
-    <Grid Background="Black">
-        <Calendar HorizontalAlignment="Center" Margin="0,116,0,0" VerticalAlignment="Top"/>
-        <DatePicker HorizontalAlignment="Center" Margin="0,289,0,0" VerticalAlignment="Top"/>
-
-    </Grid>
+    <Viewbox Stretch="Fill">
+        <Grid Width="800" Height="450" Background="Black">
+            <Label Content="Agendar Horários" HorizontalAlignment="Center" Margin="0,51,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36" FontFamily="Impact"/>
+            <TextBox HorizontalAlignment="Center" Margin="0,185,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="140" Height="35"/>
+            <TextBox x:Name="txTatoo" HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="140" Height="34" Margin="0,225,0,0"/>
+            <Label Content="Label" HorizontalAlignment="Left" Margin="204,183,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20" FontFamily="Segoe UI Black"/>
+            <Label Content="Label" HorizontalAlignment="Left" Margin="204,220,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Segoe UI Black" FontSize="20"/>
+            <Label Content="Label" HorizontalAlignment="Left" Margin="204,267,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20" FontFamily="Segoe UI Black"/>
+            <Button Content="Avançar" HorizontalAlignment="Center" Margin="0,385,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" BorderBrush="White" Height="26" Width="128" Click="Button_Click"/>
+            <ComboBox HorizontalAlignment="Center" Margin="0,271,0,0" VerticalAlignment="Top" Width="140" Height="33" Background="#FF130000" SelectionChanged="ComboBox_SelectionChanged" BorderBrush="Black">
+                <ComboBoxItem Content="08:30"/>
+                <ComboBoxItem Content="10:30"/>
+            </ComboBox>
+        </Grid>
+    </Viewbox>
 </Page>

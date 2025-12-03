@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Home">
-    
+
     <Page.Resources>
         <!-- Estilo para botões escuros com efeito de sombra -->
         <Style x:Key="DarkButtonStyle" TargetType="Button">
@@ -31,28 +31,31 @@
         </Style>
     </Page.Resources>
 
-    <Grid>
-        <!-- Fundo com padrão de darkornamental (simulado com vetores) -->
+    <Viewbox>
+        <Grid Width="800" Height="450">
 
-        <!-- Conteúdo principal -->
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20">
-            <!-- Nome do estúdio -->
-            <TextBlock Text="Valhalla Studio" FontSize="48" FontFamily="Impact" Foreground="#FFFFFFFF" 
+            <!-- Fundo com padrão de darkornamental (simulado com vetores) -->
+
+            <!-- Conteúdo principal -->
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20">
+                <!-- Nome do estúdio -->
+                <TextBlock Text="Valhalla Studio" FontSize="48" FontFamily="Impact" Foreground="#FFFFFFFF" 
                        HorizontalAlignment="Center" Margin="0,0,0,50"/>
 
-            <!-- Descrição sutil -->
-            <TextBlock Text="Especialistas em Blackwork, Suminagashi e Dark Ornamental" FontSize="18" Foreground="#FFCCCCCC" 
+                <!-- Descrição sutil -->
+                <TextBlock Text="Especialistas em Blackwork, Suminagashi e Dark Ornamental" FontSize="18" Foreground="#FFCCCCCC" 
                        HorizontalAlignment="Center" Margin="0,0,0,30"/>
 
-            <!-- Botões -->
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
-                <Button x:Name="BtnLogin" Content="Login" Style="{StaticResource DarkButtonStyle}" Margin="0,0,20,0" 
+                <!-- Botões -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                    <Button x:Name="BtnLogin" Content="Login" Style="{StaticResource DarkButtonStyle}" Margin="0,0,20,0" 
                         Click="BtnLogin_Click"/>
-                <Button x:Name="BtnCadastro" Content="Cadastro" Style="{StaticResource DarkButtonStyle}" 
+                    <Button x:Name="BtnCadastro" Content="Cadastro" Style="{StaticResource DarkButtonStyle}" 
                         Click="BtnCadastro_Click"/>
-            </StackPanel>
+                </StackPanel>
 
-            <!-- Elemento decorativo: Ícone de tatuagem -->
-        </StackPanel>
-    </Grid>
+                <!-- Elemento decorativo: Ícone de tatuagem -->
+            </StackPanel>
+        </Grid>
+    </Viewbox>
 </Page>

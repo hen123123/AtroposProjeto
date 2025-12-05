@@ -32,6 +32,7 @@ namespace ProjetoEstudio
 
         private void BtnEntrar_Click(object sender, RoutedEventArgs e)
         {
+
             string connectionString = "Server=localhost;Database=valhalla;Uid=root;pwd=root;";
 
             using (var connection = new MySql.Data.MySqlClient.MySqlConnection(connectionString))
@@ -46,6 +47,7 @@ namespace ProjetoEstudio
                     if (userCount > 0)
                     {
                         NavigationService.Navigate(new Hubescolhas());
+                        ((App)Application.Current).CurrentUser = TxtUsername.Text;
                     }
                     else
                     {

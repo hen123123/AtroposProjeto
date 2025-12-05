@@ -25,22 +25,24 @@ namespace ProjetoEstudio
         {
             InitializeComponent();
             txTatoo.Text = tatoo;
+            ((App)Application.Current).Servico = tatoo;
+            txt_cliente.Text = ((App)Application.Current).CurrentUser;
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("Selecposescolha.xaml", UriKind.Relative));
-        }
-
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
+            NavigationService.Navigate(new Selecposescolha());
         }
 
         private void VoltarHubClick(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Hubescolhas());
+        }
+
+        private void Txt_Cliente(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

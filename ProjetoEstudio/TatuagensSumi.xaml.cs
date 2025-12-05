@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,6 +33,11 @@ namespace ProjetoEstudio
         private void BtnSelec1_Click(object sender, RoutedEventArgs e)
         {
             var btn = sender as Button;
+
+            var sql = $"UPDATE cadastro SET Servico = '{btn.Name}' WHERE usuario = '{((App)Application.Current).CurrentUser}' ";
+            MySqlCommand cmd = new MySqlCommand(sql, ConexaoBanco.Conexao);
+            cmd.ExecuteNonQuery();
+
             NavigationService.Navigate(new Agenda(btn.Name));
         }
     }

@@ -29,43 +29,45 @@
         </Style>
     </Page.Resources>
     <!--FINALPAGERESOUCE-->
+    <Viewbox Stretch="Fill">
+        <Grid   Width="800" Height="450">
+            <!-- Fundo com efeito de blackwork (gradiente linear) -->
+            <Rectangle Fill="#FF000000"/>
+            <Rectangle>
+                <Rectangle.Fill>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#FF000000" Offset="0"/>
+                        <GradientStop Color="#FF111111" Offset="0.5"/>
+                        <GradientStop Color="#FF000000" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
 
-    <Grid>
-        <!-- Fundo com efeito de blackwork (gradiente linear) -->
-        <Rectangle Fill="#FF000000"/>
-        <Rectangle>
-            <Rectangle.Fill>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Color="#FF000000" Offset="0"/>
-                    <GradientStop Color="#FF111111" Offset="0.5"/>
-                    <GradientStop Color="#FF000000" Offset="1"/>
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-
-        <!-- Conteúdo -->
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Margin="20">
-            <!-- Título -->
-            <TextBlock Text="Login" FontSize="32" FontFamily="Segoe UI Black" Foreground="#FFFFFFFF" 
+            <!-- Conteúdo -->
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Margin="20">
+                <!-- Título -->
+                <TextBlock Text="Login" FontSize="32" FontFamily="Segoe UI Black" Foreground="#FFFFFFFF" 
                        HorizontalAlignment="Center" Margin="0,0,0,30"/>
-            <!-- Campo Nome de Usuário -->
-            <TextBlock Text="Nome de Usuário" Foreground="#FFCCCCCC" Margin="0,0,0,5"/>
-            <TextBox x:Name="TxtUsername" Style="{StaticResource DarkTextBoxStyle}" Margin="0,0,0,20"/>
+                <!-- Campo Nome de Usuário -->
+                <TextBlock Text="Nome de Usuário" Foreground="#FFCCCCCC" Margin="0,0,0,5"/>
+                <TextBox x:Name="TxtUsername" Style="{StaticResource DarkTextBoxStyle}" Margin="0,0,0,20"/>
 
-            <!-- Campo Senha -->
-            <TextBlock Text="Senha" Foreground="#FFCCCCCC" Margin="0,0,0,5"/>
-            <PasswordBox x:Name="PwdPassword" Style="{StaticResource DarkPasswordBoxStyle}" Margin="0,0,0,30"/>
+                <!-- Campo Senha -->
+                <TextBlock Text="Senha" Foreground="#FFCCCCCC" Margin="0,0,0,5"/>
+                <PasswordBox x:Name="PwdPassword" Style="{StaticResource DarkPasswordBoxStyle}" Margin="0,0,0,30"/>
 
-            <!-- Botão Entrar -->
-            <Button x:Name="BtnEntrar" Content="Entrar" Background="#FF333333" Foreground="#FFFFFFFF" 
+                <!-- Botão Entrar -->
+                <Button x:Name="BtnEntrar" Content="Entrar" Background="#FF333333" Foreground="#FFFFFFFF" 
                     FontSize="16" Padding="10" BorderBrush="#FF666666" BorderThickness="2" 
                     Width="116" HorizontalAlignment="Center" Click="BtnEntrar_Click"/>
 
-            <!-- Botão Voltar (igual ao Entrar e centralizado, usa o mesmo handler) -->
-            <Button x:Name="BtnVoltar" Content="Voltar" Background="#FF333333" Foreground="#FFFFFFFF"
+                <!-- Botão Voltar (igual ao Entrar e centralizado, usa o mesmo handler) -->
+                <Button x:Name="BtnVoltar" Content="Voltar" Background="#FF333333" Foreground="#FFFFFFFF"
                     FontSize="16" Padding="10" BorderBrush="#FF666666" BorderThickness="2"
                     Width="116" HorizontalAlignment="Center" Margin="0,10,0,0"
                     Click="BtnVoltar_Click"/>
-        </StackPanel>
-    </Grid>
+            </StackPanel>
+
+        </Grid>
+    </Viewbox>
 </Page>

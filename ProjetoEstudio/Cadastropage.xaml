@@ -29,52 +29,55 @@
         </Style>
     </Page.Resources>
     <!--FINALPAGERESOUCE-->
-    <Grid Margin="0,0,0,-21">
-        <!-- Fundo com efeito de suminagashi (gradiente radial) -->
-        <Ellipse Fill="#FF000000" Width="600" Height="600" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0.5"/>
-        <Ellipse>
-            <Ellipse.Fill>
-                <RadialGradientBrush GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
-                    <GradientStop Color="#FF111111" Offset="0"/>
-                    <GradientStop Color="#FF000000" Offset="1"/>
-                </RadialGradientBrush>
-            </Ellipse.Fill>
-        </Ellipse>
+    <Viewbox Stretch="Fill">
+        <Grid Width="800" Height="450">
+            <!-- Fundo com efeito de suminagashi (gradiente radial) -->
+            <Ellipse Fill="#FF000000" Width="600" Height="600" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0.5"/>
+            <Ellipse>
+                <Ellipse.Fill>
+                    <RadialGradientBrush GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
+                        <GradientStop Color="#FF111111" Offset="0"/>
+                        <GradientStop Color="#FF000000" Offset="1"/>
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
 
-        <!-- Conteúdo -->
+            <!-- Conteúdo -->
 
-        <StackPanel Width="400" Margin="20" HorizontalAlignment="Center">
-            <!-- Título -->
-            <TextBlock Text="Cadastro" FontSize="32" FontFamily="Segoe UI Black" Foreground="#FFFFFFFF" 
+            <StackPanel Width="400" Margin="20" HorizontalAlignment="Center">
+                <!-- Título -->
+                <TextBlock Text="Cadastro" FontSize="32" FontFamily="Segoe UI Black" Foreground="#FFFFFFFF" 
                            HorizontalAlignment="Center" Margin="0,0,0,30"/>
 
-            <!-- Campo Email (adicionei para completar) -->
-            <TextBlock Text="Nome de Usuário" Foreground="#FFCCCCCC" Margin="0,0,0,5"/>
-            <TextBox x:Name="Txtusuario" Style="{StaticResource DarkTextBoxStyle}" Margin="0,0,0,30"/>
+                <!-- Campo Email (adicionei para completar) -->
+                <TextBlock Text="Nome de Usuário" Foreground="#FFCCCCCC" Margin="0,0,0,5"/>
+                <TextBox x:Name="Txtusuario" Style="{StaticResource DarkTextBoxStyle}" Margin="0,0,0,30"/>
 
-            <!-- Campo Telefone -->
-            <TextBlock Text="Telefone" Foreground="#FFCCCCCC" Margin="0,0,0,5"/>
-            <TextBox x:Name="TxtTelefone" Style="{StaticResource DarkTextBoxStyle}" Margin="0,0,0,20"/>
+                <!-- Campo Telefone -->
+                <TextBlock Text="Telefone" Foreground="#FFCCCCCC" Margin="0,0,0,5"/>
+                <TextBox x:Name="TxtTelefone" Style="{StaticResource DarkTextBoxStyle}" Margin="0,0,0,20"/>
 
-            <!-- Campo Senha -->
-            <TextBlock Text="Senha" Foreground="#FFCCCCCC" Margin="0,0,0,5"/>
-            <PasswordBox x:Name="txt_senha" Style="{StaticResource DarkPasswordBoxStyle}" Margin="0,0,0,20"/>
+                <!-- Campo Senha -->
+                <TextBlock Text="Senha" Foreground="#FFCCCCCC" Margin="0,0,0,5"/>
+                <PasswordBox x:Name="txt_senha" Style="{StaticResource DarkPasswordBoxStyle}" Margin="0,0,0,20"/>
 
-            <!-- Campo Confirmar Senha -->
-            <TextBlock Text="Confirmar Senha" Foreground="#FFCCCCCC" Margin="0,0,0,5"/>
-            <PasswordBox x:Name="PwdConfirmPassword" Style="{StaticResource DarkPasswordBoxStyle}" Margin="0,0,0,20"/>
-            
-            <!-- Botões alinhados lado a lado -->
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
-                <Button x:Name="BtnCadastrar" Content="Cadastrar" Background="#FF1A1A1A" Foreground="#FFFFFFFF" 
+                <!-- Campo Confirmar Senha -->
+                <TextBlock Text="Confirmar Senha" Foreground="#FFCCCCCC" Margin="0,0,0,5"/>
+                <PasswordBox x:Name="PwdConfirmPassword" Style="{StaticResource DarkPasswordBoxStyle}" Margin="0,0,0,20"/>
+
+                <!-- Botões alinhados lado a lado -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+                    <Button x:Name="BtnCadastrar" Content="Cadastrar" Background="#FF1A1A1A" Foreground="#FFFFFFFF" 
                         FontSize="16" Padding="10" BorderBrush="#FF666666" BorderThickness="2" 
                         Width="116" Margin="0,0,8,0" Click="BtnCadastrar_Click" RenderTransformOrigin="-0.396,0.218"/>
-                <Button x:Name="BtnVoltar" Content="Voltar" Background="#FF1A1A1A" Foreground="#FFFFFFFF"
+                    <Button x:Name="BtnVoltar" Content="Voltar" Background="#FF1A1A1A" Foreground="#FFFFFFFF"
                         FontSize="16" Padding="10" BorderBrush="#FF666666" BorderThickness="2"
                         Width="116" Margin="8,0,0,0"
                         Click="BtnVoltar_Click" RenderTransformOrigin="-0.396,0.218"/>
+                </StackPanel>
             </StackPanel>
-        </StackPanel>
 
-    </Grid>
+
+        </Grid>
+    </Viewbox>
 </Page>

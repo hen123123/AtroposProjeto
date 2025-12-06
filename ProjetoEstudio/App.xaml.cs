@@ -11,15 +11,17 @@ namespace ProjetoEstudio
     {
         public string CurrentUser { get; internal set; }
         public string Servico { get; internal set; }
+
+        public string Horario { get; internal set; }
     }
 
     public class Agendas
     {
-        public DateTime DataHora { get; set; }
+        public string DataHora { get; set; }
         public string Servico { get; set; }
         public string Cliente { get; set; }
 
-        public Agendas(DateTime dataHora, string servico, string cliente)
+        public Agendas(string dataHora, string servico, string cliente)
         {
             DataHora = dataHora;
             Servico = servico;

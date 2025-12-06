@@ -24,11 +24,9 @@ namespace ProjetoEstudio
         public Cadastropage()
         {
             InitializeComponent();
-
-
-            
         }
-        private void InserirDados(string usuario, string telefone, string senha, DateTime agenda)
+
+        private void InserirDados(string usuario, string telefone, string senha, string agenda)
         {
             try
             {
@@ -60,7 +58,7 @@ namespace ProjetoEstudio
                 MessageBox.Show("As senhas não coincidem. Por favor, tente novamente.");
                 return;
             }
-            InserirDados(Txtusuario.Text, TxtTelefone.Text, txt_senha.Password, DateTime.Now);
+            InserirDados(Txtusuario.Text, TxtTelefone.Text, txt_senha.Password, "");
             MessageBox.Show("Cadastro realizado com sucesso!");
 
             Txtusuario.Clear();

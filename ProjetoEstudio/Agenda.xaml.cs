@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,8 +33,21 @@ namespace ProjetoEstudio
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                string sql = $"ALTER TABLE INTO cadastro UPDATE Horario {((App)Application.Current).Horario}";
+                var cmdados = new MySqlCommand(sql, ConexaoBanco.Conexao);
+                cmdados.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+
             NavigationService.Navigate(new Selecposescolha());
         }
+
 
         private void VoltarHubClick(object sender, RoutedEventArgs e)
         {

@@ -7,132 +7,133 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="TatuagemBlack">
+    <Viewbox Stretch="Fill">
+        <Grid   Width="800" Height="450">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
+            <!-- Fundo com efeito de blackwork (gradiente radial) -->
+            <Ellipse Fill="#FF000000" Width="800" Height="800" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0.3" Grid.RowSpan="2"/>
+            <Ellipse Grid.RowSpan="2">
+                <Ellipse.Fill>
+                    <RadialGradientBrush GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
+                        <GradientStop Color="#FF111111" Offset="0"/>
+                        <GradientStop Color="#FF000000" Offset="1"/>
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
 
-        <!-- Fundo com efeito de blackwork (gradiente radial) -->
-        <Ellipse Fill="#FF000000" Width="800" Height="800" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0.3" Grid.RowSpan="2"/>
-        <Ellipse Grid.RowSpan="2">
-            <Ellipse.Fill>
-                <RadialGradientBrush GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
-                    <GradientStop Color="#FF111111" Offset="0"/>
-                    <GradientStop Color="#FF000000" Offset="1"/>
-                </RadialGradientBrush>
-            </Ellipse.Fill>
-        </Ellipse>
-
-        <!-- Conteúdo principal -->
-        <StackPanel Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="20">
-            <!-- Título da página -->
-            <TextBlock Text="Trabalhos em Blackwork" FontSize="36" FontFamily="Impact" Foreground="#FFFFFFFF" 
+            <!-- Conteúdo principal -->
+            <StackPanel Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="20">
+                <!-- Título da página -->
+                <TextBlock Text="Trabalhos em Blackwork" FontSize="36" FontFamily="Impact" Foreground="#FFFFFFFF" 
                        HorizontalAlignment="Center" Margin="0,20,0,40">
-                <TextBlock.Effect>
-                    <DropShadowEffect Color="#FF000000" BlurRadius="5" ShadowDepth="2"/>
-                </TextBlock.Effect>
-            </TextBlock>
+                    <TextBlock.Effect>
+                        <DropShadowEffect Color="#FF000000" BlurRadius="5" ShadowDepth="2"/>
+                    </TextBlock.Effect>
+                </TextBlock>
 
-            <!-- Galeria de placeholders em WrapPanel rolável -->
-            <ScrollViewer VerticalScrollBarVisibility="Auto" Height="500">
-                <WrapPanel x:Name="WrapGallery" Orientation="Horizontal" HorizontalAlignment="Center">
-                    <!-- Item 1: Placeholder para Tatuagem Blackwork 1 -->
-                    <StackPanel Margin="10">
-                        <Rectangle Width="150" Height="150" Stroke="#FF666666" StrokeThickness="2" Margin="10">
-                            <Rectangle.Fill>
-                                <ImageBrush ImageSource="/227344b5-5311-4741-99d3-7f7c848c88eb.jpg"/>
-                            </Rectangle.Fill>
-                            <Rectangle.Effect>
-                                <DropShadowEffect Color="#FF000000" BlurRadius="10" ShadowDepth="5"/>
-                            </Rectangle.Effect>
-                        </Rectangle>
-                        <Button x:Name="BW1" Content="Selecionar" Background="#FF333333" Foreground="#FFFFFFFF" BorderBrush="#FF666666" BorderThickness="1" Padding="8" Margin="5" FontSize="12" Width="100" Click="BtnSelecionar1_Click">
-                            <Button.Style>
-                                <Style TargetType="{x:Type Button}">
-                                    <Style.Triggers>
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter Property="Background" Value="#FF555555"/>
-                                        </Trigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </Button.Style>
-                        </Button>
-                    </StackPanel>
+                <!-- Galeria de placeholders em WrapPanel rolável -->
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Height="500">
+                    <WrapPanel x:Name="WrapGallery" Orientation="Horizontal" HorizontalAlignment="Center">
+                        <!-- Item 1: Placeholder para Tatuagem Blackwork 1 -->
+                        <StackPanel Margin="10">
+                            <Rectangle Width="150" Height="150" Stroke="#FF666666" StrokeThickness="2" Margin="10">
+                                <Rectangle.Fill>
+                                    <ImageBrush ImageSource="/227344b5-5311-4741-99d3-7f7c848c88eb.jpg"/>
+                                </Rectangle.Fill>
+                                <Rectangle.Effect>
+                                    <DropShadowEffect Color="#FF000000" BlurRadius="10" ShadowDepth="5"/>
+                                </Rectangle.Effect>
+                            </Rectangle>
+                            <Button x:Name="BW1" Content="Selecionar" Background="#FF333333" Foreground="#FFFFFFFF" BorderBrush="#FF666666" BorderThickness="1" Padding="8" Margin="5" FontSize="12" Width="100" Click="BtnSelecionar1_Click">
+                                <Button.Style>
+                                    <Style TargetType="{x:Type Button}">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#FF555555"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                        </StackPanel>
 
-                    <!-- Item 2: Placeholder para Tatuagem Blackwork 2 -->
-                    <StackPanel Margin="10">
-                        <Rectangle Width="150" Height="150" Stroke="#FF666666" StrokeThickness="2" Margin="10">
-                            <Rectangle.Fill>
-                                <ImageBrush ImageSource="/fd8fd315-97fa-4e1c-b652-553df38bd057.jpg"/>
-                            </Rectangle.Fill>
-                            <Rectangle.Effect>
-                                <DropShadowEffect Color="#FF000000" BlurRadius="10" ShadowDepth="5"/>
-                            </Rectangle.Effect>
-                        </Rectangle>
-                        <Button x:Name="BW2" Content="Selecionar" Background="#FF333333" Foreground="#FFFFFFFF" BorderBrush="#FF666666" BorderThickness="1" Padding="8" Margin="5" FontSize="12" Width="100" Click="BtnSelecionar1_Click">
-                            <Button.Style>
-                                <Style TargetType="{x:Type Button}">
-                                    <Style.Triggers>
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter Property="Background" Value="#FF555555"/>
-                                        </Trigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </Button.Style>
-                        </Button>
-                    </StackPanel>
+                        <!-- Item 2: Placeholder para Tatuagem Blackwork 2 -->
+                        <StackPanel Margin="10">
+                            <Rectangle Width="150" Height="150" Stroke="#FF666666" StrokeThickness="2" Margin="10">
+                                <Rectangle.Fill>
+                                    <ImageBrush ImageSource="/fd8fd315-97fa-4e1c-b652-553df38bd057.jpg"/>
+                                </Rectangle.Fill>
+                                <Rectangle.Effect>
+                                    <DropShadowEffect Color="#FF000000" BlurRadius="10" ShadowDepth="5"/>
+                                </Rectangle.Effect>
+                            </Rectangle>
+                            <Button x:Name="BW2" Content="Selecionar" Background="#FF333333" Foreground="#FFFFFFFF" BorderBrush="#FF666666" BorderThickness="1" Padding="8" Margin="5" FontSize="12" Width="100" Click="BtnSelecionar1_Click">
+                                <Button.Style>
+                                    <Style TargetType="{x:Type Button}">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#FF555555"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                        </StackPanel>
 
-                    <!-- Item 3: Placeholder para Tatuagem Blackwork 3 -->
-                    <StackPanel Margin="10">
-                        <Rectangle Width="150" Height="150" Stroke="#FF666666" StrokeThickness="2" Margin="10">
-                            <Rectangle.Fill>
-                                <ImageBrush ImageSource="/3ea8d25c-8f2e-4a8e-a4fa-590051debcdc.jpg"/>
-                            </Rectangle.Fill>
-                            <Rectangle.Effect>
-                                <DropShadowEffect Color="#FF000000" BlurRadius="10" ShadowDepth="5"/>
-                            </Rectangle.Effect>
-                        </Rectangle>
-                        <Button x:Name="BW3" Content="Selecionar" Background="#FF333333" Foreground="#FFFFFFFF" BorderBrush="#FF666666" BorderThickness="1" Padding="8" Margin="5" FontSize="12" Width="100" Click="BtnSelecionar1_Click">
-                            <Button.Style>
-                                <Style TargetType="{x:Type Button}">
-                                    <Style.Triggers>
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter Property="Background" Value="#FF555555"/>
-                                        </Trigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </Button.Style>
-                        </Button>
-                    </StackPanel>
-                </WrapPanel>
-            </ScrollViewer>
+                        <!-- Item 3: Placeholder para Tatuagem Blackwork 3 -->
+                        <StackPanel Margin="10">
+                            <Rectangle Width="150" Height="150" Stroke="#FF666666" StrokeThickness="2" Margin="10">
+                                <Rectangle.Fill>
+                                    <ImageBrush ImageSource="/3ea8d25c-8f2e-4a8e-a4fa-590051debcdc.jpg"/>
+                                </Rectangle.Fill>
+                                <Rectangle.Effect>
+                                    <DropShadowEffect Color="#FF000000" BlurRadius="10" ShadowDepth="5"/>
+                                </Rectangle.Effect>
+                            </Rectangle>
+                            <Button x:Name="BW3" Content="Selecionar" Background="#FF333333" Foreground="#FFFFFFFF" BorderBrush="#FF666666" BorderThickness="1" Padding="8" Margin="5" FontSize="12" Width="100" Click="BtnSelecionar1_Click">
+                                <Button.Style>
+                                    <Style TargetType="{x:Type Button}">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#FF555555"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                        </StackPanel>
+                    </WrapPanel>
+                </ScrollViewer>
 
-            <!-- Link (mantido) para voltar ao Hub -->
+                <!-- Link (mantido) para voltar ao Hub -->
 
-        </StackPanel>
+            </StackPanel>
 
-        <!-- Botão Voltar fixo na parte inferior da tela -->
-        <Button Grid.Row="1" Content="Voltar" Background="#FF333333" Foreground="#FFFFFFFF" BorderBrush="#FF666666" BorderThickness="1" Padding="8" FontSize="12" Width="100" Height="34" Click="BtnVoltar_Click" HorizontalAlignment="Center" Margin="0,12,0,20" RenderTransformOrigin="0.5,0.5">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.101"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-            <Button.Style>
-                <Style TargetType="{x:Type Button}">
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#FF555555"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
-        </Button>
+            <!-- Botão Voltar fixo na parte inferior da tela -->
+            <Button Grid.Row="1" Content="Voltar" Background="#FF333333" Foreground="#FFFFFFFF" BorderBrush="#FF666666" BorderThickness="1" Padding="8" FontSize="12" Width="100" Height="34" Click="BtnVoltar_Click" HorizontalAlignment="Center" Margin="0,12,0,20" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.101"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF555555"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
 
-    </Grid>
+        </Grid>
+    </Viewbox>
 </Page>

@@ -57,6 +57,15 @@ namespace ProjetoEstudio
                 Usuario = usuario;
             }
         }
-        
+
+        private void sairtudo_Click(object sender, RoutedEventArgs e)
+        {
+            var result = MessageBox.Show("Deseja realmente sair?", "...", MessageBoxButton.YesNo);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                Application.Current.Shutdown();
+            } 
+        }
     }
 }

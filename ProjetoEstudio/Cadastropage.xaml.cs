@@ -26,7 +26,7 @@ namespace ProjetoEstudio
             InitializeComponent();
         }
 
-        private void InserirDados(string usuario, string telefone, string senha, string agenda)
+        private void InserirDados(string usuario, string telefone, string senha, DateTime agenda)
         {
             try
             {
@@ -37,6 +37,7 @@ namespace ProjetoEstudio
                     cmdados.Parameters.AddWithValue("@telefone", telefone);
                     cmdados.Parameters.AddWithValue("@senha", senha);
                     cmdados.Parameters.AddWithValue("@agenda", agenda);
+                    cmdados.Parameters.AddWithValue("@Servico", " ");
                     cmdados.ExecuteNonQuery();
                 }
             }
@@ -58,7 +59,7 @@ namespace ProjetoEstudio
                 MessageBox.Show("As senhas não coincidem. Por favor, tente novamente.");
                 return;
             }
-            InserirDados(Txtusuario.Text, TxtTelefone.Text, txt_senha.Password, "");
+            InserirDados(Txtusuario.Text, TxtTelefone.Text, txt_senha.Password, DateTime.Now);
             MessageBox.Show("Cadastro realizado com sucesso!");
 
             Txtusuario.Clear();

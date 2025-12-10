@@ -35,16 +35,16 @@ namespace ProjetoEstudio
         {
             try
             {
-                string sql = $"ALTER TABLE INTO cadastro UPDATE Horario {((App)Application.Current).Horario}";
-                var cmdados = new MySqlCommand(sql, ConexaoBanco.Conexao);
-                cmdados.ExecuteNonQuery();
-
+                string sql = $"UPDATE cadastro SET agenda = '{cbHora.Text}' WHERE usuario = 'k'";
+                using (var cmdados = new MySqlCommand(sql, ConexaoBanco.Conexao))
+                {
+                    cmdados.ExecuteNonQuery();
+                }
             }
             catch (Exception ex)
             {
-
+                Console.WriteLine("Erro ao inserir dados: " + ex.Message);
             }
-
             NavigationService.Navigate(new Selecposescolha());
         }
 

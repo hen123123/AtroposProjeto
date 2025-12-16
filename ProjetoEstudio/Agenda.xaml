@@ -17,7 +17,7 @@
             <Label Content="Horário:" HorizontalAlignment="Left" Margin="204,254,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20" FontFamily="Segoe UI Black"/>
             <Button Content="Avançar" HorizontalAlignment="Center" Margin="0,385,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" BorderBrush="White" Height="26" Width="128" Click="Button_Click"/>
             <Button x:Name="VoltarHub" Content="Voltar" HorizontalAlignment="Center" Margin="0,416,0,0" VerticalAlignment="Top" Height="26" Width="100" Background="{x:Null}" BorderBrush="White" Foreground="White" Click="VoltarHubClick"/>
-            <ComboBox x:Name="cbHora" HorizontalAlignment="Center" Margin="0,264,0,0" VerticalAlignment="Top" Width="140" FontSize="20">
+            <ComboBox x:Name="cbHora" HorizontalAlignment="Center" Margin="0,264,0,0" VerticalAlignment="Top" Width="140" FontSize="20" SelectionChanged="cbHora_SelectionChanged">
                 <ComboBoxItem Content="08:30"/>
                 <ComboBoxItem Content="10:30"/>
                 <ComboBoxItem Content="13:30"/>

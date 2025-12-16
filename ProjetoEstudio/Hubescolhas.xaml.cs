@@ -42,18 +42,15 @@ namespace ProjetoEstudio
         {
             if (_selectedStyle == "Suminagashi")
             {
-                MessageBox.Show("Você selecionou o estilo Suminagashi!", "Confirmação", MessageBoxButton.OK, MessageBoxImage.Information);
                 // Navega para a página do Suminagashi (arquivo XAML relativo)
                 this.NavigationService?.Navigate(new Uri("TatuagensSumi.xaml", UriKind.Relative));
             }
             else if (_selectedStyle == "BlackWork")
-            {
-                MessageBox.Show("Você selecionou o estilo BlackWork!", "Confirmação", MessageBoxButton.OK, MessageBoxImage.Information);
+            {               
                 this.NavigationService?.Navigate(new Uri("TatuagemBlack.xaml", UriKind.Relative));
             }
             else if (_selectedStyle == "DarkOrnamental")
-            {
-                MessageBox.Show("Você selecionou o estilo DarkOrnamental!", "Confirmação", MessageBoxButton.OK, MessageBoxImage.Information);
+            {              
                 this.NavigationService?.Navigate(new Uri("TatuagensDark.xaml", UriKind.Relative));
             }
             else

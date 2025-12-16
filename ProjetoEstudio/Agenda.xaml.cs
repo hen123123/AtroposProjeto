@@ -35,9 +35,11 @@ namespace ProjetoEstudio
         {
             try
             {
-                string sql = $"UPDATE cadastro SET agenda = '{cbHora.Text}' WHERE usuario = 'k'";
+                string sql = $"UPDATE cadastro SET agenda = @agenda WHERE usuario = @usuario";
                 using (var cmdados = new MySqlCommand(sql, ConexaoBanco.Conexao))
                 {
+                    cmdados.Parameters.AddWithValue("@agenda", cbHora.Text);
+                    cmdados.Parameters.AddWithValue("@usuario", txt_cliente.Text);
                     cmdados.ExecuteNonQuery();
                 }
             }
@@ -55,6 +57,11 @@ namespace ProjetoEstudio
         }
 
         private void Txt_Cliente(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void cbHora_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

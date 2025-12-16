@@ -16,14 +16,15 @@
                 </LinearGradientBrush>
             </Grid.Background>
             <Label Content="Agenda Final" HorizontalAlignment="Center" Margin="0,33,0,0" VerticalAlignment="Top" Foreground="White" Height="36" FontSize="20" FontFamily="Impact"/>
-            <DataGrid x:Name="LstAgendamentos" VerticalScrollBarVisibility="Auto" Margin="0,136,0,136" AutoGenerateColumns="False" Background="#FFF0F0F0" >
+            <DataGrid x:Name="LstAgendamentos" VerticalScrollBarVisibility="Auto" Margin="0,136,0,136" AutoGenerateColumns="False" Background="#FFF0F0F0"  >
                 <DataGrid.Columns >
-                    <DataGridTextColumn Header="Data e Hora" Binding="{Binding Agenda}" Width="*"/>
+                    <DataGridTextColumn Header="Hora" Binding="{Binding Agenda}" Width="*"/>
                     <DataGridTextColumn Header="Serviço" Binding="{Binding Servico}" Width="*"/>
                     <DataGridTextColumn Header="Cliente" Binding="{Binding Usuario}" Width="*"/>
                 </DataGrid.Columns>
             </DataGrid>
             <Button x:Name="sairtudo" Content="Sair" HorizontalAlignment="Center" Margin="0,401,0,0" VerticalAlignment="Top" FontSize="18" Background="{x:Null}" BorderBrush="White" Foreground="White" Width="156" Height="31" Click="sairtudo_Click"/>
+            <Button x:Name="Update" Content="Update" HorizontalAlignment="Center" Margin="0,361,0,0" VerticalAlignment="Top" Width="156" Height="35" Click="Button_Click" Background="{x:Null}" BorderBrush="White" Foreground="White" FontSize="18"/>
         </Grid>
     </Viewbox>
 </Page>

@@ -24,24 +24,7 @@ namespace ProjetoEstudio
         public Selecposescolha()
         {
             InitializeComponent();
-
-            string sql = $"select * from cadastro";
-            MySqlCommand cmd = new MySqlCommand(sql, ConexaoBanco.Conexao);
-            MySqlDataReader reader = cmd.ExecuteReader();
-
-            var agendamentos = new List<Agendamento>();
-            while (reader.Read())
-            {
-                var agenda = reader["agenda"].ToString();
-                var servico = reader["Servico"].ToString();
-                var usuario = reader["usuario"].ToString();
-
-                agendamentos.Add(new Agendamento(agenda, servico, usuario));
-
-            }
-            reader.Close();
-            LstAgendamentos.ItemsSource = agendamentos;
-
+            UpdateDados();
         }
 
         public class Agendamento
@@ -65,7 +48,55 @@ namespace ProjetoEstudio
             if (result == MessageBoxResult.Yes)
             {
                 Application.Current.Shutdown();
-            } 
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (LstAgendamentos.SelectedItem != null)
+            {
+
+                try
+                {
+
+                    var items = (Agendamento)LstAgendamentos.SelectedItem;
+                    string sql = $"UPDATE cadastro SET agenda = @agenda, Servico = @servico, usuario = @user  WHERE usuario = @usuario";
+                    using (var cmdados = new MySqlCommand(sql, ConexaoBanco.Conexao))
+                    {
+                        cmdados.Parameters.AddWithValue("@agenda", items.Agenda);
+                        cmdados.Parameters.AddWithValue("@servico", items.Servico);
+                        cmdados.Parameters.AddWithValue("@user", items.Usuario);
+                        cmdados.Parameters.AddWithValue("@usuario", items.Usuario);
+                        cmdados.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Erro ao atualizar dados: " + ex.Message);
+                }
+                //NavigationService.Navigate(new Selecposescolha());
+            }
+        }
+
+        private void UpdateDados()
+        {
+            string sql = $"select * from cadastro";
+            MySqlCommand cmd = new MySqlCommand(sql, ConexaoBanco.Conexao);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            var agendamentos = new List<Agendamento>();
+            while (reader.Read())
+            {
+                var agenda = reader["agenda"].ToString();
+                var servico = reader["Servico"].ToString();
+                var usuario = reader["usuario"].ToString();
+
+                agendamentos.Add(new Agendamento(agenda, servico, usuario));
+
+            }
+            reader.Close();
+            LstAgendamentos.ItemsSource = agendamentos;
         }
     }
 }
